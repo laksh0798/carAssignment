@@ -1,25 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './components/Navbar';
+import Slider from './components/Slider';
+import './styles/index.scss'
+import AboutUs from './containers/AboutUs';
+import Product from './containers/Product';
+import Client from './containers/Client';
+import Map from './containers/Map';
+import ContactUs from './containers/ContactUs';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ParallaxProvider>
+      <div className="App">
+        <Navbar />
+        <Slider />
+        <AboutUs />
+        <Product />
+        <Client />
+        <Map />
+        <ContactUs />
+      </div>
+    </ParallaxProvider>
   );
 }
 
